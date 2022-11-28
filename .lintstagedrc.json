@@ -1,0 +1,8 @@
+{
+  "*.json": "prettier --write",
+  "webpack.*.ts": "prettier --write",
+  "app/**/*.ts": ["prettier --list-different", "eslint"],
+  "src/**/*.ts": ["prettier --list-different", "eslint"],
+  "src/**/*.tsx": ["prettier --list-different", "eslint"],
+  "types/**/*.ts": ["prettier --list-different", "eslint"]
+}

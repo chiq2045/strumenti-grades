@@ -26,10 +26,9 @@
     }
   },
   "include": [
-    "src",
-    "app",
-    "types",
-    "utils",
+    "src/**/*",
+    "app/**/*",
+    "types/**/*",
     "babel.config.json",
     "webpack.common.ts",
     "webpack.dev.ts",
