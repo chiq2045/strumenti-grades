@@ -2,11 +2,17 @@
   "name": "strumenti-grades",
   "packageManager": "yarn@3.3.0",
   "dependencies": {
-    "@adobe/react-spectrum": "^3.23.0",
     "@auth0/auth0-react": "^1.12.0",
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.2",
+    "@chakra-ui/skip-nav": "^2.0.12",
+    "@chakra-ui/system": "^2.3.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
     "dotenv": "^16.0.3",
+    "framer-motion": "^7.6.17",
     "jwks-rsa": "^3.0.0",
     "koa": "^2.13.4",
     "koa-body": "^6.0.1",
@@ -17,7 +23,9 @@
     "mongodb": "^4.12.1",
     "mongodb-memory-server": "^8.10.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-aria": "^3.21.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
