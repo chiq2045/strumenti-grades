@@ -19,7 +19,9 @@ export const ErrorBoundary = () => {
       <Alert status="error">
         <AlertIcon />
         <AlertTitle>Error</AlertTitle>
-        <AlertDescription>{routerError.error.message}</AlertDescription>
+        <AlertDescription>
+          {routerError?.error?.message ?? 'Undefined Error'}
+        </AlertDescription>
       </Alert>
       <Box h="16">
         <Center h="100%">

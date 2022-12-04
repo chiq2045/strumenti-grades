@@ -12,7 +12,7 @@ root.render(
     domain="strumenti.us.auth0.com"
     clientId="Gnt4XuNd83SgbJOC2qjEb3X30oAnJMnM"
     redirectUri={window.location.origin}
-    audience="https://strumenti.us.auth0.com/api/v2"
+    audience="https://api.ogamba.com/strumenti/grades"
     scope="read:grades update:grades create:grades delete:grades"
   >
     <ChakraProvider>

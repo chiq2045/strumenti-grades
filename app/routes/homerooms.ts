@@ -2,6 +2,7 @@ import Router from '@koa/router';
 import { devDb as db } from '../database';
 import koaBody from 'koa-body';
 import { ObjectId } from 'mongodb';
+import { Homeroom } from 'types';
 
 const homerooms = new Router({
   prefix: '/homerooms',
@@ -10,8 +11,11 @@ const homerooms = new Router({
 homerooms
   .get('/', async (ctx) => {
     try {
-      const data = await db().then((v) =>
-        v.collection('homerooms').find().toArray()
+      const data = await db().then(
+        (v) => v.collection('homerooms').find().toArray() as Promise<Homeroom[]>
+      );
+      data.forEach((v) =>
+        v.id ? v : { ...v, id: new ObjectId(v._id).toString() }
       );
       ctx.body = { data };
     } catch (e) {
