@@ -26,6 +26,7 @@ const createHomeroom = (): Homeroom => {
       'Ms',
       'Mrs',
     ])} ${faker.name.lastName()}`,
+    grade: faker.helpers.arrayElement([1, 2, 3, 4, 5, 6, 7, 8]),
   };
 };
 const homerooms = Array.from({ length: 10 }, () => createHomeroom());

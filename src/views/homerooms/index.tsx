@@ -13,15 +13,34 @@ export const Homerooms = () => {
     ReturnType<typeof homeroomLoader>
   >;
 
+  const renderGradeWithSuffix = (grade: number) => {
+    let suffix = 'th';
+
+    switch (grade) {
+      case 1:
+        suffix = 'st';
+        break;
+      case 2:
+        suffix = 'nd';
+        break;
+      case 3:
+        suffix = 'rd';
+        break;
+      // no default
+    }
+    return `${grade}${suffix}`;
+  };
+
   console.log(homerooms);
   return (
     <div>
       <h2>Homerooms</h2>
       <ul>
-        {homerooms?.data.map((homeroom) => (
-          <li key={homeroom.id}>
-            <h2>{homeroom.title}</h2>
-            <p>{homeroom.teacher}</p>
+        {homerooms?.data.map(({ id, title, teacher, grade }) => (
+          <li key={id}>
+            <h2>{title}</h2>
+            <p>{teacher}</p>
+            <p>{renderGradeWithSuffix(grade)} Grade</p>
           </li>
         ))}
       </ul>

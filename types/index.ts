@@ -13,6 +13,7 @@ export type Homeroom = {
   id: string;
   title: string;
   teacher: string;
+  grade: number;
 };
 
 export type Student = {
