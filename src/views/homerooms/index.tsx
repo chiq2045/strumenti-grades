@@ -1,5 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
-import { CreateStandaloneToastReturn } from '@chakra-ui/react';
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Heading,
+  CreateStandaloneToastReturn,
+  List,
+  ListItem,
+  Text,
+} from '@chakra-ui/react';
 import { homeroomRequests } from '../../utils/requests/homerooms';
 
 export const homeroomLoader = async (
@@ -9,9 +18,11 @@ export const homeroomLoader = async (
 };
 
 export const Homerooms = () => {
-  const homerooms = useLoaderData() as Awaited<
+  const { data } = useLoaderData() as Awaited<
     ReturnType<typeof homeroomLoader>
   >;
+
+  const homerooms = data.sort((a, b) => a.grade - b.grade);
 
   const renderGradeWithSuffix = (grade: number) => {
     let suffix = 'th';
@@ -31,19 +42,25 @@ export const Homerooms = () => {
     return `${grade}${suffix}`;
   };
 
-  console.log(homerooms);
   return (
     <div>
-      <h2>Homerooms</h2>
-      <ul>
-        {homerooms?.data.map(({ id, title, teacher, grade }) => (
-          <li key={id}>
-            <h2>{title}</h2>
-            <p>{teacher}</p>
-            <p>{renderGradeWithSuffix(grade)} Grade</p>
-          </li>
+      <Heading as='h1'>Homerooms</Heading>
+      <List spacing={1}>
+        {homerooms.map(({ id, title, teacher, grade }) => (
+          <ListItem key={id}>
+            <Card>
+              <CardHeader>
+                <Heading size='md'>
+                  {title} - {renderGradeWithSuffix(grade)} Grade
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>{teacher}</Text>
+              </CardBody>
+            </Card>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };
