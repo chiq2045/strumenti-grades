@@ -8,31 +8,31 @@ export const Header = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <Box h="16">
-      <Center h="100%">
+    <Box h='16'>
+      <Center h='100%'>
         <Stack
-          direction="row"
-          spacing="1"
-          justify="space-between"
-          align="center"
+          direction='row'
+          spacing='1'
+          justify='space-between'
+          align='center'
         >
           <Box>
-            <Link role="button" as={NavLink} to="/">
+            <Link role='button' as={NavLink} to='/'>
               Home
             </Link>
           </Box>
           <Box>
-            <Link role="button" as={NavLink} to="/homerooms">
+            <Link role='button' as={NavLink} to='/homerooms'>
               Homerooms
             </Link>
           </Box>
           <Box>
-            <Link role="button" as={NavLink} to="/students">
+            <Link role='button' as={NavLink} to='/students'>
               Students
             </Link>
           </Box>
           <Box>
-            <Link role="button" as={NavLink} to="/grades">
+            <Link role='button' as={NavLink} to='/grades'>
               Grades
             </Link>
           </Box>

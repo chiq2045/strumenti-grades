@@ -16,16 +16,16 @@ export const ErrorBoundary = () => {
 
   return (
     <div>
-      <Alert status="error">
+      <Alert status='error'>
         <AlertIcon />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>
           {routerError?.error?.message ?? 'Undefined Error'}
         </AlertDescription>
       </Alert>
-      <Box h="16">
-        <Center h="100%">
-          <Link role="button" as={NavLink} to="/">
+      <Box h='16'>
+        <Center h='100%'>
+          <Link role='button' as={NavLink} to='/'>
             Go Home
           </Link>
         </Center>

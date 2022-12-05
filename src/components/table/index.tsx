@@ -32,7 +32,7 @@ export const Table = <T,>(
 
   return (
     <ChakraTable {...gridProps}>
-      <RowGroup type="head">
+      <RowGroup type='head'>
         {collection.headerRows.map((headerRow) => (
           <HeaderRow key={headerRow.key} item={headerRow} state={state}>
             {[...headerRow.childNodes].map((column) =>
@@ -45,7 +45,7 @@ export const Table = <T,>(
           </HeaderRow>
         ))}
       </RowGroup>
-      <RowGroup type="body">
+      <RowGroup type='body'>
         {[...collection.body.childNodes].map((row) => (
           <Row key={row.key} item={row} state={state}>
             {[...row.childNodes].map((cell) =>

@@ -9,11 +9,11 @@ const root = createRoot(container as HTMLElement);
 
 root.render(
   <Auth0Provider
-    domain="strumenti.us.auth0.com"
-    clientId="Gnt4XuNd83SgbJOC2qjEb3X30oAnJMnM"
+    domain='strumenti.us.auth0.com'
+    clientId='Gnt4XuNd83SgbJOC2qjEb3X30oAnJMnM'
     redirectUri={window.location.origin}
-    audience="https://api.ogamba.com/strumenti/grades"
-    scope="read:grades update:grades create:grades delete:grades"
+    audience='https://api.ogamba.com/strumenti/grades'
+    scope='read:grades update:grades create:grades delete:grades'
   >
     <ChakraProvider>
       <App />
