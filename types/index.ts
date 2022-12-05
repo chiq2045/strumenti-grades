@@ -38,7 +38,7 @@ export type GrowthOutcome = Omit<Grade, 'proficiency'> & {
   outcome: string;
 };
 
-export type GetAxiosResponse<T> = {
+export type BackendResponse<T> = {
   data: T[];
   error?: MongoError | Error;
   message?: string;

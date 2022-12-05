@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse, isAxiosError } from 'axios';
-import { GetAxiosResponse, Homeroom } from 'types';
+import { BackendResponse } from 'types';
 
 export const baseUrl = 'http://localhost:3000';
 
@@ -9,13 +9,12 @@ export const instance = (url: string) =>
     timeout: 15000,
   });
 
-export const responseBody = (
-  response: AxiosResponse<GetAxiosResponse<Homeroom>>
-) => response.data;
+export const responseBody = <T>(response: AxiosResponse<BackendResponse<T>>) =>
+  response.data;
 
-export const errorBody = (
-  error: Error | AxiosError<GetAxiosResponse<Homeroom>>
-): GetAxiosResponse<Homeroom> =>
+export const errorBody = <T>(
+  error: Error | AxiosError<BackendResponse<T>>
+): BackendResponse<T> =>
   isAxiosError(error)
     ? {
         data: error.response?.data.data ?? [],
@@ -24,6 +23,6 @@ export const errorBody = (
       }
     : {
         message: 'Error',
-        data: [] as Homeroom[],
+        data: [] as T[],
         error,
       };

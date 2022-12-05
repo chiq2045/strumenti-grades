@@ -1,4 +1,5 @@
 import { CreateStandaloneToastReturn } from '@chakra-ui/react';
+import { Homeroom } from 'types';
 import { instance, responseBody, errorBody } from '../constants';
 
 export const homeroomRequests = (
@@ -15,7 +16,7 @@ export const homeroomRequests = (
           duration: 5000,
           isClosable: true,
         });
-        return responseBody(v);
+        return responseBody<Homeroom>(v);
       })
       .catch((e) => {
         toast({
@@ -25,7 +26,7 @@ export const homeroomRequests = (
           duration: 6000,
           isClosable: true,
         });
-        return errorBody(e);
+        return errorBody<Homeroom>(e);
       });
   },
 });
