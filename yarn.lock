@@ -4769,6 +4769,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/data@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "@react-stately/data@npm:3.8.0"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-types/shared": ^3.16.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 6dba8e6e28a2ca7927c03e2b33850ecfa1904f6b85060b28803b21b203b5209e3049c7cfaa36744e36e6176475d600073621f5e9c2ac0c0a6c6de89bfdf93b78
+  languageName: node
+  linkType: hard
+
 "@react-stately/datepicker@npm:^3.2.0":
   version: 3.2.0
   resolution: "@react-stately/datepicker@npm:3.2.0"
@@ -11382,6 +11394,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-stately@npm:^3.19.0":
+  version: 3.19.0
+  resolution: "react-stately@npm:3.19.0"
+  dependencies:
+    "@react-stately/calendar": ^3.0.4
+    "@react-stately/checkbox": ^3.3.1
+    "@react-stately/collections": ^3.5.0
+    "@react-stately/combobox": ^3.3.0
+    "@react-stately/data": ^3.8.0
+    "@react-stately/datepicker": ^3.2.0
+    "@react-stately/dnd": ^3.0.0
+    "@react-stately/list": ^3.6.0
+    "@react-stately/menu": ^3.4.3
+    "@react-stately/numberfield": ^3.3.0
+    "@react-stately/overlays": ^3.4.3
+    "@react-stately/radio": ^3.6.1
+    "@react-stately/searchfield": ^3.3.3
+    "@react-stately/select": ^3.3.3
+    "@react-stately/selection": ^3.11.1
+    "@react-stately/slider": ^3.2.3
+    "@react-stately/table": ^3.6.0
+    "@react-stately/tabs": ^3.2.3
+    "@react-stately/toggle": ^3.4.3
+    "@react-stately/tooltip": ^3.2.3
+    "@react-stately/tree": ^3.4.0
+    "@react-types/shared": ^3.16.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: e6a1d84c359e2471c00c1d9320fcf76100ac8e99a0c1c48b6f67cbc2aad2dfcd83f073e82de50fdc4ada1a5cd81723a7442dc87bf6ae0560634e2a1b35cae6ff
+  languageName: node
+  linkType: hard
+
 "react-style-singleton@npm:^2.2.1":
   version: 2.2.1
   resolution: "react-style-singleton@npm:2.2.1"
@@ -12361,6 +12405,7 @@ __metadata:
     react-aria: ^3.21.0
     react-dom: ^18.2.0
     react-router-dom: ^6.4.3
+    react-stately: ^3.19.0
     style-loader: ^3.3.1
     ts-loader: ^9.4.1
     ts-node: ^10.9.1
